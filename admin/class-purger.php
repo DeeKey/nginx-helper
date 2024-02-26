@@ -545,7 +545,7 @@ abstract class Purger {
 			$fp = fopen( $nginx_helper_admin->functional_asset_path() . 'nginx.log', 'a+' );
 			if ( $fp ) {
 
-				fwrite( $fp, "\n" . gmdate( 'Y-m-d H:i:s ' ) . ' | ' . $level . ' | ' . $msg );
+				fwrite( $fp, "\n" . wp_date( 'Y-m-d H:i:s ' ) . ' | ' . $level . ' | ' . $msg );
 				fclose( $fp );
 
 			}
